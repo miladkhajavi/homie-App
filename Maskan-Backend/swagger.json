@@ -1,0 +1,21 @@
+{
+    "swagger":"2.0",
+    "info":{
+        "title":"homie"
+    },
+    "tags":[{
+        "name":"user"
+    },{
+        "name":"reserve"
+    },{
+        "name":"realestate"
+    },{
+        "name":"estate"
+    }],
+    "schemes": [
+        "http"
+    ],
+    "path":{
+      
+    }
+}

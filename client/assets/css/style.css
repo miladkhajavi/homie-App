@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "IRANSansWeb_Medium";
+    src: local("IRANSansWeb_Medium"),
+     url(/font/IRANSansWeb_Medium.ttf) format("truetype");
+
+}
+* {
+    font-family: "IRANSansWeb_Medium";
+}
+
+ 
+.loginbtn{
+    background-color: aqua;
+}
+.animateLoginLogo{
+    transition: all .5s ease-in-out; 
+    
+}
+.animateLoginLogo:hover{
+    transform: scale(1.03);
+}
+
+.p-auth{
+    padding-top: 20px;
+    color: #636363;
+    text-shadow: 0 8px 10px rgb(96, 96, 96);
+    
+}
+a {
+    text-decoration: none;
+}
+/* .image-main-page{
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+} */
+.area-MainPage{
+    text-shadow: 0 10px 10px black;
+    font-size: 30px;
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+}
+.image-main-page:hover{
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+} 
+.search-mainPage {
+    width: 600px;
+    margin:50px 0;
+  }
+
+
+
+ 
+/* radio button */
+/* .radiobtn{
+    border: 1px solid green;
+    padding: 4px;
+    margin: 0;
+    border-radius:10px;
+} */
+
+
+/* radio button end */
+@media only screen and (min-width:800px) {
+   
+    /* .search-inputMain{
+        width:200px;
+        
+    } */
+   
+    
+  }
+
+  @media only screen and (max-width:800px) {
+    /* .search-inputMain{
+        width:200px;
+        
+    } */
+    .search-mainPage {
+        /* width: 600px; */
+        margin:10px 0;
+      }
+  }
