@@ -46,7 +46,6 @@ let seconds = date_ob.getSeconds();
 // customize
 
 let input = `- [${date} - ${hours}:${minutes}:${seconds}] -`
-console.log(input);
 
 // instantiate a new Winston Logger with the settings defined above
 const logger = new winston.createLogger({
