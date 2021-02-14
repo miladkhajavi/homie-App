@@ -145,6 +145,7 @@ export const ContactUsJoi = (req, res, next) => {
   const schema = Joi.object({
     firstName: Joi.string(),
     lastName: Joi.string(),
+    description: Joi.string(),
     mobile: Joi.string().min(10).max(12).regex(/^[0-9]/).messages({
       "string.min": "Mobile number Less Than Allowed",
       "string.max": "Mobile number More Than Allowed",
