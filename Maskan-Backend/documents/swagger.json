@@ -1,0 +1,497 @@
+{
+    "swagger": "2.0",
+    "host": "localhost:3000",
+    "basePath": "/",
+    "info": {
+        "title": "Maskan|املاک آنلاین هومی",
+        "version": "1.0"
+    },
+    "tags": [
+        {
+            "name": "user"
+        },
+        {
+            "name": "reserve"
+        },
+        {
+            "name": "realestate"
+        },
+        {
+            "name": "estate"
+        }
+    ],
+    "paths": {
+        "/user/register": {
+            "post": {
+                "description": "new user can sign up",
+                "tags": [
+                    "user"
+                ],
+                "deprecated": false,
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Register"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "409": {
+                        "description": "user with this info is exist(douplicate error)"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/user/login": {
+            "post": {
+                "description": "client can sign In",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Login"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/user/profile": {
+            "get": {
+                "description": "show profile",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/user/users": {
+            "get": {
+                "description": "all users",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Page"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/user/edit": {
+            "put": {
+                "description": "client can edit profile",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/EditProfile"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/user/deleteAccount": {
+            "delete": {
+                "description": "client can delete account",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/user/contactus": {
+            "post": {
+                "description": "contact us for all members and guest",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Contactus"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/user/avatar": {
+            "post": {
+                "description": "client can update avatar",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Avatar"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        }
+    },
+    "parameters": {
+        "Contactus": {
+            "name": "contactus",
+            "in": "body",
+            "description": "",
+            "schema": {
+                "$ref": "#/definitions/Contactus"
+            }
+        },
+        "Avatar": {
+            "name": "avatar",
+            "in": "formData",
+            "type": "file",
+            "description": "add or update userAvatar"
+        },
+        "Page": {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "minimum": 1,
+            "type": "integer",
+            "description": ""
+        },
+        "Register": {
+            "name": "register",
+            "in": "body",
+            "required": true,
+            "schema": {
+                "$ref": "#/definitions/Register"
+            }
+        },
+        "Login": {
+            "name": "login",
+            "in": "body",
+            "required": true,
+            "schema": {
+                "$ref": "#/definitions/Login"
+            }
+        },
+        "EditProfile": {
+            "name": "edit",
+            "in": "body",
+            "required": true,
+            "schema": {
+                "$ref": "#/definitions/EditProfile"
+            }
+        }
+    },
+    "securityDefinitions": {
+        "Bearer": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header",
+            "description": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjdjYzU4MTQyMmU2YzMxNTAwMDViYTgiLCJpYXQiOjE2MTMzMzE0MDQsImV4cCI6MTYxMzM0OTQwNH0.iFie_WrGDU2JemDdoI_HQlogFJWUjAXbcbEawy5x6QQ"
+        }
+    },
+    "definitions": {
+        "Contactus": {
+            "type":"object",
+            "properties": {
+                "firstName": {
+                    "type": "string",
+                    "default": "milad"
+                },
+                "lastName": {
+                    "type": "string",
+                    "default": "khajavi"
+                },
+                "mobile": {
+                    "type": "string",
+                    "default": "09226334927"
+                },
+                "email": {
+                    "type": "string",
+                    "default": "mkhajavi5@gmail.com"
+                },
+                "description": {
+                    "type": "string",
+                    "default": "hi your application have some bugs please check it,  thanks"
+                }
+            }
+        },
+        "User": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string",
+                    "default": "Milad"
+                },
+                "lastName": {
+                    "type": "string",
+                    "default": "khajavi"
+                },
+                "userName": {
+                    "type": "string",
+                    "default": "miladkhajavi"
+                },
+                "mobile": {
+                    "type": "string",
+                    "default": "09226334927"
+                },
+                "email": {
+                    "type": "string",
+                    "default": "mkhajavi5@gmail.com",
+                    "uniqueItems": true
+                },
+                "role": {
+                    "type": "string",
+                    "enum": [
+                        "user",
+                        "admin",
+                        "realestate",
+                        "support"
+                    ],
+                    "default": "user"
+                },
+                "password": {
+                    "type": "string",
+                    "default": "12345"
+                },
+                "avatar": {
+                    "type": "string",
+                    "default": "user.png"
+                }
+            }
+        },
+        "Register": {
+            "type": "object",
+            "properties": {
+                "userName": {
+                    "type": "string",
+                    "default": "miladkhajavi"
+                },
+                "email": {
+                    "type": "string",
+                    "default": "mkhajavi5@gmail.com",
+                    "uniqueItems": true
+                },
+                "password": {
+                    "type": "string",
+                    "default": "12345"
+                }
+            }
+        },
+        "Login": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "default": "mkhajavi5@gmail.com",
+                    "uniqueItems": true
+                },
+                "password": {
+                    "type": "string",
+                    "default": "12345"
+                }
+            }
+        },
+        "EditProfile": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string",
+                    "default": "F-example edited"
+                },
+                "lastName": {
+                    "type": "string",
+                    "default": "L-example edited"
+                },
+                "mobile": {
+                    "type": "string",
+                    "default": "09226334927"
+                }
+            }
+        }
+    },
+    "schemes": [
+        "http",
+        "https",
+        "wss"
+    ]
+}

@@ -287,15 +287,16 @@ export default {
         lastName,
         mobile,
         email,
-        description
+        description,
       } = req.body;
-      let item = await new Contact({
+      let item = new Contact({
         firstName,
         lastName,
         mobile,
         email,
         description
-      }).save();
+      })
+      await item.save();
       successResponses(res, true, MSG.success, item)
     } catch (error) {
       catchHandle(res, error)
