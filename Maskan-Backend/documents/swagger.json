@@ -311,6 +311,490 @@
                     }
                 }
             }
+        },
+        "/user/google": {
+            "get": {
+                "description": "oAuth2",
+                "tags": [
+                    "user"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "security": [
+                    {
+                        "oAuth2": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/reserve/send": {
+            "post": {
+                "description": "request for view estates",
+                "tags": [
+                    "reserve"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Reserve"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/reserve/request": {
+            "get": {
+                "description": "user can see a his/her request",
+                "tags": [
+                    "reserve"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Id"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/reserve/request/all": {
+            "get": {
+                "description": "user can see all his/her requests",
+                "tags": [
+                    "reserve"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Page"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/reserve/requests": {
+            "get": {
+                "description": "real Estate can see all requests",
+                "tags": [
+                    "reserve"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Page"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/reserve/all": {
+            "get": {
+                "description": "admin can see all requests",
+                "tags": [
+                    "reserve"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Page"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/reserve/remove": {
+            "delete": {
+                "description": "user can remove his requests if( status is sent) else(can't deleted)",
+                "tags": [
+                    "reserve"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Id"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/realstates/signup": {
+            "post": {
+                "description": "should create new information RealEstates",
+                "tags": [
+                    "realestate"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Realstates"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/realstates/editinfo": {
+            "put": {
+                "description": "should edit information RealEstates",
+                "tags": [
+                    "realestate"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Id"
+                    },
+                    {
+                        "$ref": "#/parameters/Realstates"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/realstates/": {
+            "get": {
+                "description": "should show information RealEstates",
+                "tags": [
+                    "realestate"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Id"
+                    }
+                ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/estate/sortprice": {
+            "get": {
+                "description": "show All Estates sort with price",
+                "tags": [
+                    "estate"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Page"
+                    },
+                    {
+                        "$ref": "#/parameters/Price"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/estate/estates": {
+            "get": {
+                "description": "show all exsist Estates (public)",
+                "tags": [
+                    "estate"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Page"
+                    },
+                    {
+                        "$ref": "#/parameters/search"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
+        },
+        "/estate/": {
+            "get": {
+                "description": " show One estate",
+                "tags": [
+                    "estate"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "500": {
+                        "description": "server error"
+                    }
+                }
+            }
         }
     },
     "parameters": {
@@ -333,8 +817,31 @@
             "in": "query",
             "required": false,
             "minimum": 1,
+            "default": 1,
             "type": "integer",
             "description": ""
+        },
+        "Price": {
+            "name": "price",
+            "in": "query",
+            "required": false,
+            "type": "number",
+            "default": -1,
+            "description": "بیشترین:-1 , کمترین:1"
+        },
+        "Search": {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "description": ""
+        },
+        "Id": {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": " Reservation Id"
         },
         "Register": {
             "name": "register",
@@ -359,19 +866,44 @@
             "schema": {
                 "$ref": "#/definitions/EditProfile"
             }
+        },
+        "Reserve": {
+            "name": "reserve",
+            "in": "body",
+            "required": true,
+            "schema": {
+                "$ref": "#/definitions/Reserve"
+            }
+        },
+        "Realstates": {
+            "name": "Realstates",
+            "in": "body",
+            "required": true,
+            "schema": {
+                "$ref": "#/definitions/Realstates"
+            }
         }
     },
     "securityDefinitions": {
+        "oAuth2": {
+            "type": "oauth2",
+            "flow": "implicit",
+            "authorizationUrl": "http://localhost:3000/user/google/callback",
+            "scopes": {
+                "read": "example read scope",
+                "write": "example write scope"
+            }
+        },
         "Bearer": {
             "type": "apiKey",
             "name": "Authorization",
             "in": "header",
-            "description": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjdjYzU4MTQyMmU2YzMxNTAwMDViYTgiLCJpYXQiOjE2MTMzMzE0MDQsImV4cCI6MTYxMzM0OTQwNH0.iFie_WrGDU2JemDdoI_HQlogFJWUjAXbcbEawy5x6QQ"
+            "description": ""
         }
     },
     "definitions": {
         "Contactus": {
-            "type":"object",
+            "type": "object",
             "properties": {
                 "firstName": {
                     "type": "string",
@@ -485,6 +1017,48 @@
                 "mobile": {
                     "type": "string",
                     "default": "09226334927"
+                }
+            }
+        },
+        "Reserve": {
+            "type": "object",
+            "properties": {
+                "estate": {
+                    "type": "string",
+                    "default": "5f7cc581422e6c3150005ba8"
+                },
+                "publisher": {
+                    "type": "string",
+                    "default": "df7cb581422e6c3159005aa3"
+                },
+                "mobile": {
+                    "type": "string",
+                    "default": "09226334927"
+                },
+                "date": {
+                    "type": "string",
+                    "default": "1399/11/11"
+                },
+                "time": {
+                    "type": "string",
+                    "default": "13:03:24"
+                }
+            }
+        },
+        "Realstates": {
+            "type": "object",
+            "properties": {
+                "phone": {
+                    "type": "string",
+                    "default": "02144649201"
+                },
+                "address": {
+                    "type": "string",
+                    "default": "تهران شهرک غرب خیابان مهستان"
+                },
+                "name": {
+                    "type": "string",
+                    "default": "املاک مهستان"
                 }
             }
         }
