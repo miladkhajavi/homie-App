@@ -49,7 +49,7 @@ export default {
     async getInfo(req, res) {
         try {
             const item = await RealEstate.findOne({
-                _id: req.body.id
+                _id: req.query.id
             }).populate('owner')
             if (!item || req.body.id === undefined) {
                 return errorResponses(res, 404, false, MSG.notFound)
