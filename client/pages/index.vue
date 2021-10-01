@@ -20,7 +20,6 @@
       </v-row>
       
       <index-page  :search="search" />
-      
     </v-container>
   </div>
 </template>

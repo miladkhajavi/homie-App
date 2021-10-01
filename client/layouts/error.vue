@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import notfound from '../components/404'
+
 export default {
   layout: 'empty',
   props: {
@@ -23,7 +23,7 @@ export default {
     }
   },
   components:{
-    notfound
+    notfound: () => import("@/components/notfound.vue")
   },
   data () {
     return {

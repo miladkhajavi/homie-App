@@ -111,14 +111,14 @@ export default {
     }
   },
 
-  // io: {
-  //   sockets: [{
-  //     name: 'connection',
-  //     url: 'http://192.168.43.36:3000',
-  //     default: true,
+  io: {
+    sockets: [{
+      name: 'abc',
+      url: 'http://localhost:3000',
+      default: true,
 
-  //   }]
-  // },
+    }]
+  },
 
   server: {
     port: 8000, // default: 3000

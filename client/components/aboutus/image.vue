@@ -1,6 +1,7 @@
 <template>
   
-    <v-img
+    <div class="parentImage">
+      <v-img
       src="/svg/about.svg"
       max-height="auto"
       class="ndndndnnd"
@@ -14,6 +15,7 @@
         </v-col>
       </v-row>
     </v-img>
+    </div>
   
 </template>
 <script>
@@ -22,7 +24,15 @@ export default {
 }
 </script>
 <style scoped>
+.parentImage{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background: url("/bg/bg1.png");
+  background-repeat: repeat;
+}
 .ndndndnnd{
     margin:10px 30px 10px 30px;
+    max-width:700px;
 }
 </style>

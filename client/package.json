@@ -9,12 +9,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.0.2",
     "core-js": "^3.6.5",
     "leaflet": "^1.7.1",
-    "nuxt": "^2.14.5",
-    "nuxt-socket-io": "^1.1.12",
+    "nuxt": "^2.15.8",
+    "nuxt-socket-io": "^1.1.23",
+    "socket.io-client": "^4.2.0",
     "vue-jalali-moment": "^1.0.0",
     "vue-persian-datetime-picker": "^2.4.0",
     "vue2-leaflet": "^2.6.0",

@@ -12,6 +12,7 @@ export const mutations = {
         // console.log(payload,"paylpad");
         delete payload.user.createdAt;
         delete payload.user.updatedAt;
+        console.log(payload,"payload");
         localStorage.setItem("HOMEITOKEN_KEY", payload.token);
         localStorage.setItem("INFO",JSON.stringify(payload.user))
         this.$axios.setToken(payload.token);

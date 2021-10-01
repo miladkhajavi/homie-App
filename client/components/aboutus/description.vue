@@ -1,4 +1,5 @@
 <template>
+<div class="description">
    <v-responsive height="auto" class="text-center pa-2">
         <v-lazy
           v-model="isActive"
@@ -29,6 +30,7 @@
           </v-card>
         </v-lazy>
       </v-responsive>
+</div>
 </template>
 <script>
 export default {
@@ -37,3 +39,13 @@ export default {
   }),
 }
 </script>
+<style scoped>
+/* .description{
+  background: url("/bg/bg1.png");
+  background-repeat: repeat;
+} */
+.v-sheet,.v-responsive{
+  background: url("/bg/bg1.png");
+  background-repeat: repeat;
+}
+</style>
