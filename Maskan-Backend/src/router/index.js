@@ -4,7 +4,7 @@ import estateRouter from './estate'
 import realEstateRouter from './realEstate'
 import reserveRouter from './reserve'
 import swagger from "swagger-ui-express"
-import swaggerDoc from "../documents/swagger.json"
+import swaggerDoc from "../../documents/swagger.json"
 
 const router = express.Router();
 

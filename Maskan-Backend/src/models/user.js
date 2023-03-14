@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const {
   SECRET_JWT_CODE
-} = require("../../config/dbConfig");
+} = require("../database/dbConfig");
 const UserSchema = new Schema({
   firstName: {
     type: String,

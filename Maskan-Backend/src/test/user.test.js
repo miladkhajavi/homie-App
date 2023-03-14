@@ -1,11 +1,11 @@
 import app from '../index'
 import request from 'supertest'
-import User from '../database/models/user'
+import User from '../models/user'
 import jwt from 'jsonwebtoken'
 import mongoose from 'mongoose'
 import {
     SECRET_JWT_CODE
-} from '../config/dbConfig'
+} from '../database/dbConfig'
 
 
 

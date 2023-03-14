@@ -1,5 +1,5 @@
 import mongoose  from "mongoose"
-import {CONFIG} from './userConfig'
+import {CONFIG} from '../config/userConfig'
 
 export const SECRET_JWT_CODE = "mAsKaNpRoJeCtSeCrEtJwTcOdE";
 

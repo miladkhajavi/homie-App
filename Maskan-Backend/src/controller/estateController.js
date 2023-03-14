@@ -1,6 +1,6 @@
-import Estate from '../database/models/estate'
-import User from '../database/models/user'
-import RSD from '../database/models/realestatedeveloper'
+import Estate from '../models/estate'
+import User from '../models/user'
+import RSD from '../models/realestatedeveloper'
 import getCoordsForAddress from "../utils/location";
 import {
     catchHandle,

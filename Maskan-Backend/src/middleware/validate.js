@@ -4,8 +4,8 @@ import Joi, {
 import {
   errorResponses
 } from "./response";
-import User from "../database/models/user";
-import Contact from "../database/models/contact";
+import User from "../models/user";
+import Contact from "../models/contact";
 /**
  * if you want study for joi validate you can read this article
  * 1 -- https://jasonwatmore.com/post/2020/07/22/nodejs-express-api-request-schema-validation-with-joi

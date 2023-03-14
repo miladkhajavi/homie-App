@@ -5,7 +5,7 @@ import passport from 'passport'
 import {
   OAuth2Strategy as GoogleStrategy
 } from 'passport-google-oauth'
-import User from '../database/models/user'
+import User from '../models/user'
 
 
 

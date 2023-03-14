@@ -1,7 +1,7 @@
 import passport from "passport";
 import { Strategy, ExtractJwt } from "passport-jwt";
-import { SECRET_JWT_CODE } from "../config/dbConfig";
-import User from "../database/models/user";
+import { SECRET_JWT_CODE } from "../database/dbConfig";
+import User from "../models/user";
 
 export const Auth = passport.authenticate("jwt" ,{session:false})
 

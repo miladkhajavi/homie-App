@@ -1,4 +1,4 @@
-import RealEstate from '../database/models/realestatedeveloper'
+import RealEstate from '../models/realestatedeveloper'
 import {
     errorResponses,
     successResponses,

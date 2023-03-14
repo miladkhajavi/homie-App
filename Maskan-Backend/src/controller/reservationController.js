@@ -1,6 +1,6 @@
-import Reservation from '../database/models/reservation'
-import User from '../database/models/user'
-import Estate from '../database/models/estate'
+import Reservation from '../models/reservation'
+import User from '../models/user'
+import Estate from '../models/estate'
 import {
     errorResponses,
     successResponses,
