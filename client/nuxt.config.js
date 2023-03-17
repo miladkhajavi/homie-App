@@ -55,6 +55,9 @@ export default {
     },
     {
       src: '~/plugins/axios'
+    },
+    {
+      src: '~/plugins/socketio.js'
     }
   ],
 
@@ -73,8 +76,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-    'nuxt-socket-io'
+    '@nuxtjs/pwa'
 
   ],
 

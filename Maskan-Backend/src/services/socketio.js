@@ -21,8 +21,11 @@ class globalSocket {
 
     io.on("connection", (socket) => {
       socket.on("room", async (room) => {
+        console.log("this is test:", room);
         socket.join(room);
       });
+
+      
     });
   }
 
@@ -30,7 +33,6 @@ class globalSocket {
     if (!io) {
       throw new Error("Socket.io not initialized");
     }
-    console.log(io);
     console.info("socket initialized");
     return io;
   }

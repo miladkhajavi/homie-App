@@ -127,6 +127,7 @@ export default {
   }),
   mounted() {
     this.$vuetify.goTo(0)
+    this.$socket.emit('room', "12345"); 
   },
   computed: {
     passwordErrors() {

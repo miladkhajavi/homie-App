@@ -18,6 +18,7 @@ function start() {
 
 
   app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://192.168.40.1:8000');
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
